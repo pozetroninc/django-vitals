@@ -1,6 +1,6 @@
-from django.conf.urls import url
 from .views import VitalsJSONView
+from django.urls import path
 
 urlpatterns = [
-    url(r'^$', VitalsJSONView.as_view(), name='vitals'),
+    path('', VitalsJSONView.as_view(), name='vitals'),
 ]
